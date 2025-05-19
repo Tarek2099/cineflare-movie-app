@@ -1,0 +1,32 @@
+import { FaStar } from "react-icons/fa";
+
+const MovieCard = ({
+  movie: { title, vote_average, release_date, poster_path, original_language },
+}) => {
+  return (
+    <div className="movie-card">
+      <img
+        src={
+          poster_path
+            ? `https://image.tmdb.org/t/p/w500${poster_path}`
+            : `/no-movie.png`
+        }
+        alt={title}
+      />
+      <h3 className="mt-2">{title}</h3>
+      <div className="content">
+        <div className="rating">
+          <FaStar className="text-yellow-400" />
+          <p>{vote_average.toFixed(1)}</p>
+        </div>
+        <span>.</span>
+        <p className="lang">{original_language}</p>
+
+        <span>.</span>
+        <p className="year">{release_date}</p>
+      </div>
+    </div>
+  );
+};
+
+export default MovieCard;

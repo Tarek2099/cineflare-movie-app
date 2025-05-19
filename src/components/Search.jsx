@@ -1,4 +1,9 @@
-const Search = ({ searchTerm, setSearchTerm }) => {
+import useFetchHook from "../hooks/FetchHook";
+
+const Search = () => {
+  const { searchTerm, handleSearch } = useFetchHook();
+  console.log(searchTerm);
+
   return (
     <>
       <div className="search">
@@ -7,7 +12,7 @@ const Search = ({ searchTerm, setSearchTerm }) => {
           type="text"
           placeholder="Search through thousands of Movies"
           value={searchTerm}
-          onChange={(e) => setSearchTerm(e.target.value)}
+          onChange={(e) => handleSearch(e.target.value)}
         />
       </div>
     </>
