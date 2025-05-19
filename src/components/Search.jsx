@@ -1,9 +1,4 @@
-import useFetchHook from "../hooks/FetchHook";
-
-const Search = () => {
-  const { searchTerm, handleSearch } = useFetchHook();
-  console.log(searchTerm);
-
+const Search = ({ handleSearch, searchTerm }) => {
   return (
     <>
       <div className="search">

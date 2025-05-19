@@ -1,11 +1,9 @@
 import { ErrorBoundary } from "react-error-boundary";
-import useFetchHook from "../hooks/FetchHook.jsx";
 import ErrorMessage from "./ErrorMessage.jsx";
 import MovieCard from "./MovieCard.jsx";
 import Spinner from "./Spinner.jsx";
 
-const AllMovies = () => {
-  const { isLoading, errorMsg, movies } = useFetchHook();
+const AllMovies = ({ isLoading, errorMsg, movies }) => {
   return (
     <ErrorBoundary FallbackComponent={ErrorMessage}>
       <div className="all-movies">

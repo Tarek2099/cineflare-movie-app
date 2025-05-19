@@ -140,6 +140,50 @@
       @apply text-gray-100 font-medium text-base;
     }
   }
+
+  .footer {
+    @apply mt-20 bg-dark-100/50 backdrop-blur-sm py-12 relative z-10;
+  }
+
+  .footer-content {
+    @apply grid grid-cols-1 md:grid-cols-2 gap-10;
+  }
+
+  .footer-brand {
+    @apply space-y-4;
+  }
+
+  .footer-brand img {
+    @apply h-12 w-auto;
+  }
+
+  .footer-brand p {
+    @apply text-light-200 max-w-xs;
+  }
+
+  .footer-links {
+    @apply grid grid-cols-2 gap-8;
+  }
+
+  .link-group h3 {
+    @apply text-white text-lg font-bold mb-4;
+  }
+
+  .link-group ul {
+    @apply space-y-3;
+  }
+
+  .link-group ul li a {
+    @apply text-light-200 hover:text-white transition-colors;
+  }
+
+  .footer-bottom {
+    @apply mt-12 pt-6 border-t border-light-100/10;
+  }
+
+  .footer-bottom p {
+    @apply text-center text-light-200 text-sm;
+  }
 }
 
 @utility text-gradient {
