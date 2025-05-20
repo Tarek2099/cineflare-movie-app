@@ -1,12 +1,19 @@
 import AllMovies from "./components/AllMovies";
 import Footer from "./components/Footer";
 import Search from "./components/Search";
+import TrendingMovies from "./components/TrendingMovies";
 import useFetchHook from "./hooks/FetchHook";
 import "./index.css";
 
 const App = () => {
-  const { isLoading, errorMsg, movies, searchTerm, handleSearch } =
-    useFetchHook();
+  const {
+    isLoading,
+    errorMsg,
+    movies,
+    searchTerm,
+    trendingMovies,
+    handleSearch,
+  } = useFetchHook();
 
   return (
     <main>
@@ -20,6 +27,7 @@ const App = () => {
           </h1>
           <Search searchTerm={searchTerm} handleSearch={handleSearch} />
         </header>
+        <TrendingMovies trendingMovies={trendingMovies} />
         <AllMovies
           className="all-movies"
           isLoading={isLoading}
