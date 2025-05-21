@@ -5,5 +5,5 @@ import { defineConfig } from 'vite'
 // https://vite.dev/config/
 export default defineConfig({
   plugins: [react(), tailwindcss()],
-  base: import.meta.env.VITE_BASE_PATH || "cineflare-movie-app"
+  base: import.meta.env.VITE_API_BASE_URL
 })
