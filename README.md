@@ -25,7 +25,7 @@ A modern web application for discovering and exploring movies, built with React 
 1. Clone the repository:
 
 ```bash
-git clone https://github.com/yourusername/cineflare-movie-app.git
+git clone https://github.com/Tarek2099/cineflare-movie-app.git
 cd cineflare-movie-app
 ```
 
