@@ -11,7 +11,7 @@ const AllMovies = ({ isLoading, errorMsg, movies }) => {
         {isLoading ? (
           <Spinner />
         ) : errorMsg ? (
-          <p>{errorMsg}</p>
+          <ErrorMessage message={errorMsg} />
         ) : (
           <ul>
             {movies.map((movie) => (

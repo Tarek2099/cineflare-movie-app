@@ -48,7 +48,7 @@ const useFetchHook = () => {
 
       // If response is not ok then it will throw a new error
       if (!response.ok) {
-        throw new Error("Failed to Fetch Movies");
+        setErrorMsg("Failed to fetch movies");
       }
       // If the response ok then it will store movie data
       const data = await response.json();
@@ -82,7 +82,7 @@ const useFetchHook = () => {
       const trendingMovies = await getTrendingMovies();
       setTrendingMovies(trendingMovies);
     } catch (error) {
-      console.error("Error fetching trending movies:", error);
+      setErrorMsg(`Error fetching trending movies: ${error.message}`);
     }
   };
 

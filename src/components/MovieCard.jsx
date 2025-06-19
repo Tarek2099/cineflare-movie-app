@@ -3,8 +3,13 @@ import { FaStar } from "react-icons/fa";
 const MovieCard = ({
   movie: { title, vote_average, release_date, poster_path, original_language },
 }) => {
+  // Handle Full Movie Detail Information
+  const handleDetails = () => {
+    console.log("Detail Information");
+  };
+
   return (
-    <div className="movie-card">
+    <div className="movie-card cursor-pointer" onClick={handleDetails}>
       <img
         src={
           poster_path
