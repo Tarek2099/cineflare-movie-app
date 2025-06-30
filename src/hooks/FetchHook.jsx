@@ -10,8 +10,6 @@ const useFetchHook = () => {
   const [searchTermDebounced, setSearchTermDebounced] = useState("");
   const [trendingMovies, setTrendingMovies] = useState([]);
 
-  console.log(getTrendingMovies());
-
   // Debounce the search term to avoid too many API calls
   useDebounce(() => setSearchTermDebounced(searchTerm), 500, [searchTerm]);
 

@@ -1,15 +1,30 @@
 import { FaStar } from "react-icons/fa";
+import { useNavigate } from "react-router";
 
 const MovieCard = ({
-  movie: { title, vote_average, release_date, poster_path, original_language },
+  movie: {
+    title,
+    id,
+    vote_average,
+    release_date,
+    poster_path,
+    original_language,
+  },
 }) => {
+  console.log(title, id);
+  const navigate = useNavigate();
+
   // Handle Full Movie Detail Information
-  const handleDetails = () => {
-    console.log("Detail Information");
+  const handleDetails = (id) => {
+    // Navigate to the Movie Details page with the movie ID
+    navigate(`/movie/${id}`);
   };
 
   return (
-    <div className="movie-card cursor-pointer" onClick={handleDetails}>
+    <div
+      className="movie-card cursor-pointer"
+      onClick={() => handleDetails(id)}
+    >
       <img
         src={
           poster_path

@@ -54,7 +54,7 @@
   }
 
   .wrapper {
-    @apply px-5 py-12 xs:p-10 max-w-7xl mx-auto flex flex-col relative z-10 space-y-0;
+    @apply px-5 pb-10 xs:px-10 max-w-7xl mx-auto flex flex-col relative z-10 space-y-0;
   }
 
   .trending {
@@ -100,7 +100,13 @@
       @apply grid grid-cols-1 gap-5 xs:grid-cols-2 md:grid-cols-3 lg:grid-cols-4;
     }
   }
+  .movie-details {
+    @apply space-y-9 p-8 flex flex-row gap-4 text-white;
 
+    & .about {
+      @apply flex flex-col gap-10;
+    }
+  }
   .movie-card {
     @apply bg-dark-100 p-5 rounded-2xl shadow-inner shadow-light-100/10;
 
