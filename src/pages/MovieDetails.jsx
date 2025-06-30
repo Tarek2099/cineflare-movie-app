@@ -15,6 +15,7 @@ const MovieDetails = () => {
     original_language,
     vote_average,
     vote_count,
+    genre_ids,
   } = movie || {};
 
   const ratings = movie?.vote_average.toFixed(1) || "N/A";
@@ -93,7 +94,7 @@ const MovieDetails = () => {
           </div>
         </div>
       </div>
-      <SimilarMovies />
+      <SimilarMovies genre={genre_ids} />
     </>
   );
 };
